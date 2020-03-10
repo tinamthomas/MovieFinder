@@ -1,4 +1,4 @@
-import healthCheckHandler from './healthcheck';
+import healthCheckHandler from './movies';
 describe('adds 1 + 2 to equal 3', () => {
   it('ad', async () => {
       const req = {};

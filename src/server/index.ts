@@ -1,6 +1,7 @@
-import healthCheckHandler from "./handlers/healthcheck";
+import healthCheckHandler from "./handlers/movies";
 
 const fastify = require('fastify')({ logger: true })
+
 
 // Declare a route
 fastify.get('/', healthCheckHandler)
