@@ -16,6 +16,7 @@ exports.setup = function(options, seedLink) {
 
 exports.up = function(db) {
   db.createTable('actors', {
+    seqId: {type: 'string'},
     id: { type: 'string', primaryKey: true },
     name: 'string',
     birthyear: 'string',
