@@ -1,5 +1,7 @@
-const healthCheckHandler = async(req, resp) => {
-    return {code: "Alive and well!"};
+import movies from "../models/movies";
+
+const movieListHandler = async(req, resp) => {
+    return {data: await movies.getAllMovies()};
 }
 
-export default healthCheckHandler;
+export default movieListHandler;

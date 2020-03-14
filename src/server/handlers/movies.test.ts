@@ -1,9 +1,17 @@
-import healthCheckHandler from './movies';
-describe('adds 1 + 2 to equal 3', () => {
-  it('ad', async () => {
+import movieListHandler from './movies';
+
+const moviesList = [];
+jest.mock('../models/movies', () => ({
+  default: {
+    getAllMovies: () => moviesList,
+  }
+}));
+
+describe('Movies Handler', () => {
+  it('should get movies list', async () => {
       const req = {};
       const resp = {};
       
-      expect(await healthCheckHandler(req, resp)).toEqual({code: "Alive and well!"});
+      expect(await movieListHandler(req, resp)).toEqual({data: moviesList});
   })
 });

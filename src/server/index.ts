@@ -1,10 +1,10 @@
-import healthCheckHandler from "./handlers/movies";
+import movieListHandler from "./handlers/movies";
 
 const fastify = require('fastify')({ logger: true })
 
 
 // Declare a route
-fastify.get('/', healthCheckHandler)
+fastify.get('/', movieListHandler)
 
 // Run the server!
 const start = async () => {
