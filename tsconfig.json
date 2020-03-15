@@ -3,7 +3,9 @@
         "module": "commonjs",
         "removeComments": true,
         "preserveConstEnums": true,
-        "sourceMap": true
+        "sourceMap": true,
+        "jsx": "react",
+        "target": "es5",
     },
     "exclude": ["node_modules", "**/*.spec.ts"]
 }
