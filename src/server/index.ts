@@ -1,4 +1,5 @@
 import movieListHandler from "./handlers/movies";
+
 const path = require('path')
 
 const fastify = require('fastify')({ logger: true })
@@ -9,7 +10,11 @@ fastify.register(require('fastify-static'), {
 });
 
 fastify.get('/', function (req, reply) {
-  reply.sendFile('index.html') // serving path.join(__dirname, 'public', 'myHtml.html') directly
+  reply.sendFile('index.html') 
+})
+
+fastify.get('/bundle.js', function (req, reply) {
+  reply.sendFile('bundle.js') 
 })
 
 // Declare a route
